@@ -10,18 +10,18 @@
 
 ### Variables to help to color the output messages
 #-----------------------------------------------------------------------------------------
-txtred=$(tput setaf 1)								# Red
-txtgrn=$(tput setaf 2)								# Green
-txtylw=$(tput setaf 3)								# Yellow
-txtrst=$(tput sgr0)									# Text reset to bash default
+txtred=$(tput setaf 1)                                         # Red
+txtgrn=$(tput setaf 2)                                         # Green
+txtylw=$(tput setaf 3)                                         # Yellow
+txtrst=$(tput sgr0)                                            # Text reset to bash default
 
 ### Service Configuration
 #-----------------------------------------------------------------------------------------
 # rTorrent Configurations
-svcUser="root"										# User running the instance of rtorrent
-svcBin=`which rtorrent`								# rtorrent binary location
-svcConf=$HOME/.rtorrent.rc						# configuration for rtorrent
-svcDtachFile=$HOIME/rtorrent.dtach				# dtatch session file
+svcUser="root"                                                 # User running the instance of rtorrent
+svcBin=`which rtorrent`                                       # rtorrent binary location
+svcConf=`su $svcUser -c "echo $WHOAMI"`/.rtorrent.rc          # configuration for rtorrent
+svcDtachFile=`su $svcUser -c "echo $WHOAMI"`/rtorrent.dtach   # dtatch session file
 
 ### Functions
 #-----------------------------------------------------------------------------------------
