@@ -19,9 +19,9 @@ txtrst=$(tput sgr0)                                            # Text reset to b
 #-----------------------------------------------------------------------------------------
 # rTorrent Configurations
 svcUser="root"                                                 # User running the instance of rtorrent
-svcBin=`which rtorrent`                                       # rtorrent binary location
-svcConf=`su $svcUser -c "echo $WHOAMI"`/.rtorrent.rc          # configuration for rtorrent
-svcDtachFile=`su $svcUser -c "echo $WHOAMI"`/rtorrent.dtach   # dtatch session file
+svcBin=`which rtorrent`                                        # rtorrent binary location
+svcConf=`su $svcUser -c "echo $WHOAMI"`/.rtorrent.rc           # configuration for rtorrent
+svcDtachFile=`su $svcUser -c "echo $WHOAMI"`/rtorrent.dtach    # dtatch session file
 
 ### Functions
 #-----------------------------------------------------------------------------------------
